@@ -1,4 +1,4 @@
-## Common Tables
+# Common Tables
 | Table           | Description                        |
 | --------------- | ---------------------------------- |
 | `patient`       | Patient information                |
@@ -15,4 +15,18 @@
 | `icd101`        | ICD-10 master data                 |
 | `kskdepartment` | Department master data             |
 
-LinkedIn Post: https://www.linkedin.com/posts/ratchanon-noknoy_healthcaredata-dataengineering-healthtech-share-7456534276168282112-Qn8r
+# Example SQL
+
+```sql
+SELECT 
+    o.vstdate,
+    COUNT(DISTINCT o.hn) AS total_patients
+FROM ovst o
+GROUP BY o.vstdate
+ORDER BY o.vstdate;
+```
+
+## Project Reference
+
+LinkedIn:
+https://www.linkedin.com/posts/ratchanon-noknoy_healthcaredata-dataengineering-healthtech-share-7456534276168282112-Qn8r?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF2Q4JEBP4yITEVbIn3E5Y8zTBxoVS6vqRA
