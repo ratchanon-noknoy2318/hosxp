@@ -1,18 +1,8 @@
-# HOSxP SQL Scripts
-
-Collection of SQL scripts for healthcare data extraction, auditing, reporting, and operational analysis within HOSxP.
-
-## Contents
-
-* Patient Data Extraction
-* OPD Visit Reports
-* Drug Allergy Records
-* Dental Records
-* Billing & Insurance Reports
-* Data Consistency Audits
-* Community Health Data
-* Telemedicine Reports
+## How to Use
+1. Open HOSxP.
+2. Go to `Tools` > `SQL Editor` (หรือเมนูที่เข้าสู่ SQL Editor รูปสายฟ้า).
+3. Copy the SQL code from this repository.
+4. Paste into the editor and press `Run` หรือกด `F9` บนคีย์บอร์ด
 
 ---
-
-For hospital use only.
+*For hospital use only.*
