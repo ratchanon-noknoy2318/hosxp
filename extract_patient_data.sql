@@ -14,13 +14,12 @@ SELECT
     h.road           AS `ชื่อถนน`,
     h.xgis           AS `ละติจูด`,
     h.ygis           AS `ลองติจูด`,
-    ''               AS `ประเภทผู้ป่วย`,
-    ''               AS `หนังสือเดินทาง`
+    
 FROM person AS p
-INNER JOIN house AS h 
+INNER JOIN house
     ON p.hcode = h.hcode
-INNER JOIN village AS v 
+INNER JOIN village
     ON h.pcucode = v.pcucode
    AND h.villcode = v.villcode
-WHERE p.typelive IN (1,3)
+WHERE p.typelive IN (1, 3)
   AND p.dischargetype = '9';
