@@ -5,7 +5,7 @@ SELECT ovst.hn,
        patient.birthday,
        spclty.name
 FROM ovst
-LEFT OUTER JOIN patient ON patient.hn = ovst.hn
-LEFT OUTER JOIN spclty ON spclty.spclty = ovst.spclty
+LEFT JOIN patient ON patient.hn = ovst.hn
+LEFT JOIN spclty ON spclty.spclty = ovst.spclty
 WHERE ovst.vstdate = CURDATE()
 ORDER BY spclty.name;
