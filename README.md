@@ -1,34 +1,12 @@
-# 🏥 Legacy Healthcare Reporting Performance Optimization
 
-## Problem
+| Name | Description |
+| :--- | :--- |
+| ovst | A table collecting patient data from arrival at the hospital for service. |
+| opitemrece | A table of billed items and medication orders for outpatient visits. |
+| nondrugitems | A table of non-drug medical items and services. |
+| patient | A table of patient demographic data (name, surname, age, date of birth). |
+| vn_stat | A table of the full patient process from registration to pharmacy. |
+| pttype | A table of all insurance type names in Thailand. |
+| icd101 | A table of disease codes and medical diagnoses. |
 
-- Daily report on **1M+ record database** took **24+ hours**
-- System built on legacy architecture with limited documentation
-- Performance issue persisted despite basic SQL tuning
-
-## Root Cause
-
-- Redundant joins across multiple data pipeline layers  
-- Repeated aggregations on identical datasets  
-- Duplicated processing logic across system components  
-- Inefficient data flow design (not query-level issue only)
-
-## Solution
-
-- Refactored data access layer to reduce unnecessary joins  
-- Centralized aggregation logic into a single processing layer  
-- Removed duplicated computations across services  
-- Streamlined end-to-end data pipeline architecture  
-
-## Result
-
-- Runtime: **24+ hours → < 1 hour**
-- Reduced database load significantly  
-- Improved system stability under high data volume  
-- Lower resource contention across reporting jobs  
-
-## Key Takeaway
-
-- Performance bottlenecks are often **system design issues**, not only SQL issues  
-- Optimizing queries alone is insufficient in legacy systems  
-- Data flow architecture has higher impact than micro-optimizations
+**Note:** The treatment rights (pttype) and diagnosis code (pdx) must be taken from vn_stat, *not from ovst*.
